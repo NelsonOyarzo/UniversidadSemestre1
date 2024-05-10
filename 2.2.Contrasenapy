@@ -1,0 +1,31 @@
+def generar_contraseña(nombre, apellido, edad, mes_nacimiento, ciudad):
+    # Primeras dos letras del nombre
+    primeras_letras_nombre = nombre[:2]
+    
+    # Edad
+    edad_str = str(edad)
+    
+    # Primera letra del nombre y primera letra del apellido
+    primeras_letras_apellido = apellido[0]
+    primera_letra_nombre_apellido = nombre[0] + primeras_letras_apellido
+    
+    # Mes de nacimiento en número
+    mes_nacimiento_str = str(mes_nacimiento)
+    
+    # Últimas dos letras de la ciudad
+    ultimas_dos_letras_ciudad = ciudad[-2:]
+    
+    # Contraseña final
+    contraseña = primeras_letras_nombre + edad_str + primera_letra_nombre_apellido + mes_nacimiento_str + ultimas_dos_letras_ciudad
+    
+    return contraseña
+
+# Ejemplo de uso
+nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ")
+edad = int(input("Ingrese su edad: "))
+mes_nacimiento = int(input("Ingrese el mes de su nacimiento en número: "))
+ciudad = input("Ingrese la ciudad donde vive: ")
+
+contraseña_generada = generar_contraseña(nombre, apellido, edad, mes_nacimiento, ciudad)
+print("La contraseña generada es:", contraseña_generada)
