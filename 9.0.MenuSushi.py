@@ -43,34 +43,33 @@ while True:
             print(f"4.-Anguila Eléctrica Roll--{ConAnguilaEléctricaRoll}\n");
             print(f"Subtotal por pagar: {TotalPago}")
             while True:
-                    opcdescuento = input("¿Posee un código de descuento? (s/n): ")
-                    if opcdescuento == "s":
-                        codigo = input("Ingrese el código de descuento: ")
-                        if codigo == "otaku":
-                            print(f"Total Productos {ConPikachuRoll+ConOtakuRoll+ConPulpoVenenosoRoll+ConAnguilaEléctricaRoll}\n")
-                            print(f"1.-Pikachu Roll------------{ConPikachuRoll}")
-                            print(f"2.-Otaku Roll--------------{ConOtakuRoll}")
-                            print(f"3.-Pulpo Venenoso Roll-----{ConPulpoVenenosoRoll}")
-                            print(f"4.-Anguila Eléctrica Roll--{ConAnguilaEléctricaRoll}\n")
-                            print(f"Subtotal por pagar: {TotalPago}")
-                            Descuento = TotalPago * 0.10
-                            print(f"Descuento por código: {Descuento}")
-                            print(f"Total: {TotalPago-Descuento}")
-                        else:
-                            print("Código incorrecto, vuelva a intentarlo")
-                    elif opcdescuento == "n":
+                opcdescuento = input("¿Posee un código de descuento? (s/n): ")
+                if opcdescuento == "s":
+                    codigo = input("Ingrese el código de descuento: ")
+                    if codigo == "otaku":
                         print(f"Total Productos {ConPikachuRoll+ConOtakuRoll+ConPulpoVenenosoRoll+ConAnguilaEléctricaRoll}\n")
                         print(f"1.-Pikachu Roll------------{ConPikachuRoll}")
                         print(f"2.-Otaku Roll--------------{ConOtakuRoll}")
                         print(f"3.-Pulpo Venenoso Roll-----{ConPulpoVenenosoRoll}")
                         print(f"4.-Anguila Eléctrica Roll--{ConAnguilaEléctricaRoll}\n")
                         print(f"Subtotal por pagar: {TotalPago}")
-                        print("Descuento por código: 0")
-                        print(f"Total: {TotalPago}")
+                        Descuento = TotalPago * 0.10
+                        print(f"Descuento por código: {Descuento}")
+                        print(f"Total: {TotalPago-Descuento}")
                     else:
-                        print("Opción no válida")
+                        print("Código incorrecto, vuelva a intentarlo")
+                elif opcdescuento == "n":
+                    print(f"Total Productos {ConPikachuRoll+ConOtakuRoll+ConPulpoVenenosoRoll+ConAnguilaEléctricaRoll}\n")
+                    print(f"1.-Pikachu Roll------------{ConPikachuRoll}")
+                    print(f"2.-Otaku Roll--------------{ConOtakuRoll}")
+                    print(f"3.-Pulpo Venenoso Roll-----{ConPulpoVenenosoRoll}")
+                    print(f"4.-Anguila Eléctrica Roll--{ConAnguilaEléctricaRoll}\n")
+                    print(f"Subtotal por pagar: {TotalPago}")
+                    print("Descuento por código: 0")
+                    print(f"Total: {TotalPago}")
                     break
-            break
+                else:
+                    print("Opción no válida")
 
                     
                     
